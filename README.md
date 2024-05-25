@@ -1,7 +1,7 @@
 # Weather Time Series Analysis using Statistical Methods and Deep Learning Models
 
 ## Project Overview
-This project conducts a thorough analysis of weather time series data using diverse statistical and deep learning models. Each model was rigorously applied to the same weather time series data to assess and compare their forecasting accuracy. Detailed results and analyses are provided to delineate the strengths and weaknesses of each approach.
+In this project, a diverse array of statistical methods and sdeep learning models were explored to decode the complexities of weather forecasting. Techniques such as Naive Forecasting, Moving Average Forecasting, Differenced Moving Average Forecasting, and Differenced Moving Average Forecasting with Smoothing were meticulously examined. Within the realm of deep learning, Simple Neural Networks, Deep Neural Networks, Single-Layer LSTMs, Single-Layer Regularized LSTMs, Bi-Directional Regularized LSTMs, Regularized Stacked GRUs, and Convolutional Layers with Stacked GRUs and Fully Connected Layers were analyzed. Through rigorous comparison and evaluation, the most effective methodology for achieving accurate and reliable weather predictions were sought. This involved establishing baseline, selecting the best model using learning rate scheduler, and conducting performance comparisons against baseline.
 
 ##  Statistical Analysis of Variables
 
@@ -123,7 +123,7 @@ Using centered approach to smooth the data at each step. For instance, to smooth
 </table>
 
 ## Deep Learning Models
-Various deep learning models, including Basic Neural Network, Deep Neural Network, LSTM, Regularized LSTM, Bi-Directional LSTM, and Stacked GRUs, are explored for temperature forecasting, each tailored to leverage sequential data characteristics for enhanced prediction accuracy.
+Various deep learning models, including Basic Neural Network, Deep Neural Network, LSTM, Regularized LSTM, Bi-Directional LSTM, Stacked GRUs, and Convolutional layer with stacked GRUs and Fully Connected Layers are explored for temperature forecasting, each tailored to leverage sequential data characteristics for enhanced prediction accuracy.
 
 ### Fixed Partitioning for Neural Network based Forecasting
 Temperature data are split into training, validation, and testing sets ensuring chronological order and accounting for seasonality, essential for effective model training and evaluation.
@@ -133,6 +133,22 @@ Data normalization using MinMaxScaler ensures consistent scaling, particularly b
 
 ### Sequence Generation
 Sequences are generated from input array data using TensorFlow's timeseries_dataset_from_array, facilitating training, validation, and testing of models with specified sequence lengths.
+
+### Model Finalization
+The two most promising models, determined by their low loss and Mean Absolute Error (MAE), were selected for further refinement. They underwent fine-tuning using a learning rate schedule to identify the optimal learning rate and were then retrained on the dataset. Among these models, the one exhibiting the best performance with the new learning rate was chosen as the final selection.
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <div>Training Loss versus Learning Rate for Model 1</div>
+      <img src="docs/lr_1.png" alt="Training Loss versus Learning Rate for Model 1" style="max-width: 100%;">
+    </td>
+    <td style="text-align: center;">
+      <div>Training Loss versus Learning Rate for Model 2</div>
+      <img src="docs/lr_2.png" alt="Training Loss versus Learning Rate for Model 2" style="max-width: 100%;">
+    </td>
+  </tr>
+</table>
 
 ### Evaluation
 Model performance is evaluated using Mean Absolute Error (MAE) metric on the test dataset, comparing predictions against actual values to quantify forecasting accuracy.
@@ -145,7 +161,7 @@ Trained models are utilized to predict future temperature values, leveraging the
 - Experiment with different learning rates and batch sizes.
 
 ## Data Sources:
-- https://s3.amazonaws.com/keras-datasets/jena_climate_2009_2016.csv.zip
+https://s3.amazonaws.com/keras-datasets/jena_climate_2009_2016.csv.zip
 
 ## License:
 This project is licensed under the Raza Mehar License. See the LICENSE.md file for details.
