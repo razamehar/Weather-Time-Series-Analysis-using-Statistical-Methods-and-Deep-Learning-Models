@@ -65,11 +65,62 @@ A systematic partitioning approach divides temperature data into training and te
 ### Naive Forecast
 Predictions are based solely on the last observed temperature, serving as a baseline for accuracy assessment.
 
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <div></div>
+      <img src="docs/8nf.png" alt="naive forecast" style="max-width: 100%;">
+    </td>
+  </tr>
+</table>
+
 ### Moving Average Forecasting
 Average temperatures over defined window sizes are computed to smooth short-term fluctuations and highlight long-term trends.
 
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <div></div>
+      <img src="docs/9ma.png" alt="moving average" style="max-width: 100%;">
+    </td>
+  </tr>
+</table>
+
 ### Differenced Moving Average Forecast
 By differencing to remove trends and seasonality before applying a moving average, this method refines predictions and improves accuracy.
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <div></div>
+      <img src="docs/10difmv.png" alt="Differenced Moving Average" style="max-width: 100%;">
+    </td>
+  </tr>
+</table>
+
+### Differenced Moving Average Forecast with Trend & Seasonality Added
+Seasonality and Trend added back to the differenced moving average.
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <div></div>
+      <img src="docs/11difmv.png" alt="Differenced Moving Average with Trend & Seasonality Added" style="max-width: 100%;">
+    </td>
+  </tr>
+</table>
+
+### Differenced Moving Average Forecast with Smoothing
+Using centered approach to smooth the data at each step. For instance, to smooth the data point at t = 365, we would compute the average of the values from t = 359 to t = 370, with the window size of 11.
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <div></div>
+      <img src="docs/12diffmv.png" alt="Differenced Moving Average with Smoothing" style="max-width: 100%;">
+    </td>
+  </tr>
+</table>
 
 ## Deep Learning Models
 Various deep learning models, including Basic Neural Network, Deep Neural Network, LSTM, Regularized LSTM, Bi-Directional LSTM, and Stacked GRUs, are explored for temperature forecasting, each tailored to leverage sequential data characteristics for enhanced prediction accuracy.
