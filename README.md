@@ -157,8 +157,12 @@ Model performance is evaluated using Mean Absolute Error (MAE) metric on the tes
 Trained models are utilized to predict future temperature values, leveraging the learned patterns and dependencies in the data to provide accurate forecasts.
 
 ## Potential Improvements
-- Adjust the number of units.
-- Experiment with different learning rates and batch sizes.
+- Modify the number of units.
+- Change the dropout ratio.
+- Test different learning rates.
+- Experiment with batch sizes.
+- Add more dense layers.
+- Alter the sequence length.
 
 ## Data Sources:
 https://s3.amazonaws.com/keras-datasets/jena_climate_2009_2016.csv.zip
