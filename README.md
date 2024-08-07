@@ -164,11 +164,11 @@ Trained models are utilized to predict future temperature values, leveraging the
 - Add more dense layers.
 - Alter the sequence length.
 
-## Data Sources:
+## Data Sources
 https://s3.amazonaws.com/keras-datasets/jena_climate_2009_2016.csv.zip
 
-## License:
+## License
 This project is licensed under the Raza Mehar License. See the LICENSE.md file for details.
 
-## Contact:
+## Contact
 For any questions or clarifications, please contact Raza Mehar at [raza.mehar@gmail.com].
