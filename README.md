@@ -3,6 +3,26 @@
 ## Project Overview
 This project explored various statistical methods and deep learning models for multivariate time series analysis. Techniques such as Naive Forecasting, Moving Average Forecasting, Differenced Moving Average Forecasting, and Differenced Moving Average Forecasting with Smoothing were meticulously examined. Within the realm of deep learning, Simple Neural Networks, Deep Neural Networks, Single-Layer LSTMs, Single-Layer Regularized LSTMs, Bi-Directional Regularized LSTMs, Regularized Stacked GRUs, and Convolutional Layers with Stacked GRUs and Fully Connected Layers were analyzed. Through rigorous comparison and evaluation, the most effective methodology for achieving accurate and reliable weather predictions were sought. This involved establishing baseline, selecting the best model using learning rate scheduler, and conducting performance comparisons against baseline.
 
+**Naive Forecasting:** A simple forecasting method where the prediction is the last observed value, assuming no change or trend.
+
+**Moving Average Forecasting:** A method that predicts future values by averaging a set of recent past values, smoothing out short-term fluctuations.
+
+**Differenced Moving Average Forecasting:** Extends moving average forecasting by first differencing the data (subtracting consecutive observations) to remove trends or seasonality.
+
+**Differenced Moving Average Forecasting with Smoothing:** Further refines differenced moving average forecasting by applying additional smoothing techniques to the differenced data to reduce noise.
+
+**Simple Neural Networks:** Basic neural networks with a single hidden layer, used for pattern recognition in data with limited complexity.
+
+**Deep Neural Networks:** Advanced neural networks with multiple hidden layers, capable of learning complex representations from large datasets.
+
+**Single-Layer LSTMs:** Long Short-Term Memory (LSTM) networks with one layer, designed to handle sequential data by retaining information over time.
+
+**Bi-Directional LSTMs:** LSTMs that process data in both forward and backward directions to enhance performance on sequential data.
+
+**GRUs:** Gated Recurrent Units (GRUs) that efficiently capture dependencies in sequential data.
+
+**CNNs:** Convolutional Neural Networks (CNNs) that adaptively learn and extract hierarchical spatial features from data using convolutional layers, commonly used for image and video processing.
+
 ##  Statistical Analysis of Variables
 
 ### Univariate Analysis
